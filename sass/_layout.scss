@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: 7rem 7fr 3fr;
+}
+
+.sidebar {
+  background-color: red;
+  grid-row: 1 / 10;
+  height: 100vh;
+  position: fixed;
+  width: 7rem;
+}
+
+.header {
+  background-color: blue;
+  height: 40rem;
+  grid-column: 2/3;
+}
+
+.realtors {
+  background-color: yellow;
+}
+
+.main {
+  background-color: green;
+  grid-column: 2 /4;
+  height: 120rem;
+}
+
+.footer {
+  background-color: gray;
+
+  grid-column: 2/4;
+}
