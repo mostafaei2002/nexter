@@ -16,9 +16,8 @@
 
 .main {
   grid-column: 2 /4;
-
-  // Test
-  height: 120rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
 }
 
 .footer {
