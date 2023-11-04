@@ -1,0 +1,69 @@
+.header {
+  // Section Layout
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20fr 10fr 10fr 10fr 15fr 5fr;
+  align-items: center;
+  justify-items: center;
+  gap: 1.6rem;
+
+  padding: 3.6rem 9.6rem 6.4rem 9.6rem;
+
+  //   Section Styles
+  background-image: linear-gradient(
+      rgba($color-secondary, 0.9),
+      rgba($color-secondary, 0.9)
+    ),
+    url("../img/hero.jpeg");
+  background-size: cover;
+  background-position: bottom;
+
+  // Hero Logo
+  &__logo {
+    max-height: 2.4rem;
+    align-self: start;
+  }
+
+  // Hero Main part
+  .heading-3 {
+    align-self: end;
+  }
+
+  .heading-3,
+  .heading-1,
+  .btn {
+    justify-self: start;
+  }
+
+  //   Featured in
+  &__featured-text {
+    align-self: end;
+    color: $color-grey-light-2;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    justify-self: stretch;
+    align-items: center;
+    gap: 1.6rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 0.5px;
+      display: block;
+      background-color: currentColor;
+    }
+  }
+
+  &__featured-logo-box {
+    justify-self: stretch;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  &__featured-logo {
+    max-height: 2.4rem;
+    filter: brightness(70%);
+  }
+}
