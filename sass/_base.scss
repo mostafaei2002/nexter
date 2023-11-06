@@ -14,6 +14,26 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+@mixin respond($device) {
+  @if device == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if device == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if device == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -28,24 +48,4 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-@mixin respond($device) {
-  @if device == tab-port {
-    @media only screen and (max-width: 75em) {
-      @content;
-    }
-  }
-
-  @if device == tab-land {
-    @media only screen and (max-width: 56.25em) {
-      @content;
-    }
-  }
-
-  @if device == phone {
-    @media only screen and (max-width: 37.5em) {
-      @content;
-    }
-  }
 }
