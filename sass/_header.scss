@@ -2,13 +2,16 @@
   // Section Layout
 
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20fr 10fr 10fr 10fr 15fr 5fr;
-  align-items: center;
-  justify-items: center;
+
+  grid-template-columns: minmax(min-content, max-content);
+  grid-template-rows: 1fr min-content min-content 1fr;
+
   gap: 1.6rem;
 
-  padding: 3.6rem 9.6rem 6.4rem 9.6rem;
+  align-items: start;
+  justify-items: start;
+
+  padding: 4.8rem 9.6rem 6.4rem;
 
   //   Section Styles
   background-image: linear-gradient(
@@ -22,27 +25,22 @@
   // Hero Logo
   &__logo {
     max-height: 2.4rem;
-    align-self: start;
+    justify-self: center;
   }
 
   // Hero Main part
   .heading-3 {
-    align-self: end;
   }
 
-  .heading-3,
-  .heading-1,
   .btn {
-    justify-self: start;
   }
 
   //   Featured in
   &__featured-text {
-    align-self: end;
     color: $color-grey-light-2;
+    justify-self: stretch;
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
-    justify-self: stretch;
     align-items: center;
     gap: 1.6rem;
 
@@ -56,7 +54,6 @@
   }
 
   &__featured-logo-box {
-    justify-self: stretch;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
