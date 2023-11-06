@@ -74,7 +74,7 @@ body {
   align-content: center;
   justify-content: center;
   padding: 4.8rem 9.6rem 6.4rem;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg");
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpg");
   background-size: cover;
   background-position: bottom; }
   @media only screen and (max-width: 37.5em) {
