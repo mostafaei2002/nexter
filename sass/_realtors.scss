@@ -16,6 +16,11 @@
   &__list {
     display: grid;
     row-gap: 3.6rem;
+    column-gap: 6.4rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 

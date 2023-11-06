@@ -10,6 +10,11 @@
     grid-template-columns: [sidebar-start header-start col1-start] 7fr [header-end col1-end col2-start] 3fr [col2-end sidebar-end];
     grid-template-rows: [sidebar-start] 6rem [sidebar-end header-start] 90vh [header-end main-start] min-content [main-end footer-start] min-content [footer-end];
   }
+
+  @include respond(tab-port) {
+    grid-template-columns: [sidebar-start header-start col1-start] 7fr [col1-end col2-start] 3fr [header-end col2-end sidebar-end];
+    grid-template-rows: [sidebar-start] 6rem [sidebar-end header-start] 90vh [header-end realtors-start] min-content [realtors-end main-start] min-content [main-end footer-start] min-content [footer-end];
+  }
 }
 
 .sidebar {
@@ -30,6 +35,11 @@
 .realtors {
   grid-row: header-start/header-end;
   grid-column: col2-start/col2-end;
+
+  @include respond(tab-port) {
+    grid-column: col1-start/col2-end;
+    grid-row: realtors-start/realtors-end;
+  }
 }
 
 .footer {
