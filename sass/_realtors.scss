@@ -1,17 +1,20 @@
 .realtors {
   display: grid;
-  grid-column: 1fr;
+
+  grid-template-columns: minmax(min-content, max-content);
+  grid-template-rows: min-content max-content;
+
   justify-items: center;
-  align-items: center;
+
+  justify-content: center;
   align-content: center;
-  grid-template-rows: max-content max-content;
+
   background-color: $color-secondary;
   padding: 3.6rem;
   row-gap: 1.6rem;
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr;
     row-gap: 3.6rem;
   }
 }
@@ -30,7 +33,7 @@
 
   &__details {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: mixmax(min-content, max-content);
     justify-items: start;
   }
 
