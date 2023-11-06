@@ -4,4 +4,4 @@ A fully responsive web page built with modern grid layouts. Follow through proje
 
 ## visit demo on Github pages
 
-[click here to see demo](https://www.mostafaei2002.github.io/nexter)
+[click here to see demo](https://mostafaei2002.github.io/nexter)
