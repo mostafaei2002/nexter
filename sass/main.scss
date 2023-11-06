@@ -1,6 +1,5 @@
 @import "base";
 @import "typography";
-@import "layout";
 
 @import "sidebar";
 @import "header";
@@ -16,3 +15,6 @@
 
 // Navigation
 @import "navigation";
+
+// Layout must overwrite everything
+@import "layout";

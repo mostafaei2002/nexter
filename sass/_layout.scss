@@ -1,25 +1,45 @@
 .container {
   display: grid;
-  grid-template-columns: 8rem 7fr 3fr;
-  grid-template-rows: 90vh min-content;
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end header-start col1-start] 7fr [header-end col1-end col2-start] 3fr [col2-end];
+  grid-template-rows: [sidebar-start header-start] 90vh [header-end main-start] min-content [main-end footer-start] min-content [footer-end sidebar-end];
 
   justify-content: center;
   align-content: center;
+
+  @include respond(tab-land) {
+    grid-template-columns: [sidebar-start header-start col1-start] 7fr [header-end col1-end col2-start] 3fr [col2-end sidebar-end];
+    grid-template-rows: [sidebar-start] 6rem [sidebar-end header-start] 90vh [header-end main-start] min-content [main-end footer-start] min-content [footer-end];
+  }
 }
 
 .sidebar {
-  grid-row: 1 / 10;
+  grid-row: sidebar-start/sidebar-end;
+  grid-column: sidebar-start/sidebar-end;
 }
 
 .header {
-  grid-column: 2/3;
-}
-
-.realtors {
+  grid-column: header-start/header-end;
+  grid-row: header-start/header-end;
 }
 
 .main {
-  grid-column: 2/4;
+  grid-column: col1-start/col2-end;
+  grid-row: main-start/main-end;
+}
+
+.realtors {
+  grid-row: header-start/header-end;
+  grid-column: col2-start/col2-end;
+}
+
+.footer {
+  grid-column: col1-start/col2-end;
+  grid-row: footer-start/footer-end;
+}
+
+// Inside Main Section
+
+.main {
   display: grid;
   grid-template-columns: [full-start] 1fr [center-start] repeat(6, 1fr) [center-end] 1fr [full-end];
   grid-template-rows: repeat(4, min-content);
@@ -39,8 +59,4 @@
 
 .gallery {
   grid-column: full-start/full-end;
-}
-
-.footer {
-  grid-column: 2/4;
 }

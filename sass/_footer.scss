@@ -9,6 +9,9 @@
     list-style: none;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
+
+    justify-content: center;
+    justify-items: center;
   }
 
   &__item {
