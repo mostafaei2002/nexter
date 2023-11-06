@@ -8,13 +8,12 @@
   &__list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(6, max-content);
-    align-items: center;
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, max-content));
   }
 
   &__item {
     transition: all 0.2s;
+    align-items: center;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.05);
