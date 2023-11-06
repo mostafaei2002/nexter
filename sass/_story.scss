@@ -53,11 +53,5 @@
     .story__text {
       margin-bottom: 1.6rem;
     }
-
-    .story__text {
-      @include respond(tab-land) {
-        font-size: 1.2rem;
-      }
-    }
   }
 }

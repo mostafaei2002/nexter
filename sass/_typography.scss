@@ -20,7 +20,7 @@ body {
   line-height: 1.1;
   color: $color-grey-dark-1;
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     font-size: 3rem;
   }
 }
