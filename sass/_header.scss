@@ -25,6 +25,9 @@
   background-size: cover;
   background-position: bottom;
 
+  @include respond(phone) {
+    padding: 4.8rem 4.8rem 6.4rem;
+  }
   // Hero Logo
   &__logo {
     max-height: 3rem;
@@ -60,10 +63,21 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
+
+    @include respond(phone-2) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 2.4rem;
+      column-gap: 3.6rem;
+      justify-items: start;
+    }
   }
 
   &__featured-logo {
     max-height: 2.4rem;
     filter: brightness(70%);
+
+    @include respond(phone) {
+      max-height: 2rem;
+    }
   }
 }

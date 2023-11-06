@@ -38,6 +38,12 @@ $font-display: "Josefin Sans", sans-serif;
       @content;
     }
   }
+
+  @if $device == phone-2 {
+    @media only screen and (max-width: 28.125em) {
+      @content;
+    }
+  }
 }
 
 *,
