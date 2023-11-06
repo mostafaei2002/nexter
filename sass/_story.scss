@@ -13,31 +13,45 @@
       ),
       url("../img/back.jpg");
     background-size: cover;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
 
   &__img {
-    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     &--1 {
-      width: 70%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      grid-column: 2/6;
+      grid-row: 2/6;
     }
 
     &--2 {
-      width: 55%;
-      bottom: 13%;
-      right: -7%;
+      position: relative;
+      top: 15%;
+      width: 115%;
+      grid-column: 4/7;
+      grid-row: 4/6;
     }
   }
 
   // Story Content
   &__content {
-    padding: 12.8rem;
+    padding: 9.6rem;
     background-color: $color-grey-light-1;
     display: grid;
+    grid-template-rows: repeat(4, min-content);
+    gap: 1.6rem;
     align-items: center;
     justify-items: start;
+
+    align-content: center;
+
+    .heading-2,
+    .story__text {
+      margin-bottom: 1.6rem;
+    }
   }
 }

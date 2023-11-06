@@ -1,7 +1,7 @@
 .homes {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 15.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, max-content));
+  margin: 12.8rem 0;
   gap: 7.2rem;
 }
 
@@ -34,7 +34,9 @@
     justify-self: center;
     width: 80%;
     padding: 1.2rem 0;
-    position: absolute;
+    position: relative;
+    top: -4rem;
+    margin-bottom: -3rem;
 
     // Styles
     background-color: $color-secondary;
@@ -79,7 +81,8 @@
   }
 
   .btn {
+    margin-top: 1rem;
     grid-column: 1 / -1;
-    padding: 0.8rem;
+    padding: 1.6rem;
   }
 }
