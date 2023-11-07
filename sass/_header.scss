@@ -60,9 +60,14 @@
   }
 
   &__featured-logo-box {
+    justify-self: center;
+
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, max-content);
     justify-items: center;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
 
     @include respond(phone-2) {
       grid-template-columns: repeat(2, 1fr);
@@ -78,6 +83,7 @@
 
     @include respond(phone) {
       max-height: 2rem;
+      max-width: 100%;
     }
   }
 }

@@ -4,6 +4,7 @@
 
   @include respond(tab-port-2) {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
   }
 }
 
@@ -22,9 +23,10 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
 
+    min-height: 0;
+
     @include respond(tab-port-2) {
       padding: 4.8rem;
-      // height: 80%;
     }
   }
 

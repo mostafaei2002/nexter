@@ -96,9 +96,13 @@ body {
       display: block;
       background-color: currentColor; }
   .header__featured-logo-box {
+    justify-self: center;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center; }
+    grid-template-columns: repeat(4, max-content);
+    justify-items: center;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between; }
     @media only screen and (max-width: 28.125em) {
       .header__featured-logo-box {
         grid-template-columns: repeat(2, 1fr);
@@ -110,7 +114,8 @@ body {
     filter: brightness(70%); }
     @media only screen and (max-width: 37.5em) {
       .header__featured-logo {
-        max-height: 2rem; } }
+        max-height: 2rem;
+        max-width: 100%; } }
 
 .realtors {
   display: grid;
@@ -159,7 +164,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin: 12.8rem 0;
-  gap: 6.4rem; }
+  gap: 6.4rem;
+  align-items: start; }
 
 .feature {
   display: grid;
@@ -169,7 +175,8 @@ body {
   .feature__icon {
     width: 4.8rem;
     height: 4.8rem;
-    fill: #c69963; }
+    fill: #c69963;
+    transform: translateY(-1rem); }
   .feature__text {
     grid-column: 2;
     align-self: start; }
@@ -179,7 +186,8 @@ body {
   grid-template-columns: repeat(2, 1fr); }
   @media only screen and (max-width: 50rem) {
     .stories {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content); } }
 
 .story__pictures {
   position: relative;
@@ -187,7 +195,8 @@ body {
   background-size: cover;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr); }
+  grid-template-rows: repeat(6, 1fr);
+  min-height: 0; }
   @media only screen and (max-width: 50rem) {
     .story__pictures {
       padding: 4.8rem; } }
@@ -550,8 +559,11 @@ body {
 
 .main {
   display: grid;
-  grid-template-columns: [full-start] 1fr [center-start] repeat(6, 1fr) [center-end] 1fr [full-end];
-  grid-template-rows: repeat(4, min-content); }
+  grid-template-columns: [full-start] minmax(2.4rem, 1fr) [center-start] repeat(8, minmax(min-content, 14rem)) [center-end] minmax(2.4rem, 1fr) [full-end];
+  grid-template-rows: min-content 40vw repeat(2, min-content); }
+  @media only screen and (max-width: 50rem) {
+    .main {
+      grid-template-rows: repeat(4, min-content); } }
 
 .features {
   grid-column: center-start/center-end; }
